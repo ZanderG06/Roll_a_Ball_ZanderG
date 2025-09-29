@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject unlockWall;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -51,6 +52,11 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+        }
+        else if (other.gameObject.CompareTag("Key"))
+        {
+            other.gameObject.SetActive(false);
+            unlockWall.gameObject.SetActive(false);
         }
     }
 
