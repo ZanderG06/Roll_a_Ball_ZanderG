@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
     public GameObject unlockWall;
+    public GameObject player;
+    public GameObject nextButton;
+    public GameObject retryButton;
+    public GameObject menuButton;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -36,6 +40,8 @@ public class PlayerController : MonoBehaviour
         {
             winTextObject.SetActive(true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+            nextButton.gameObject.SetActive(true);
+            menuButton.gameObject.SetActive(true);
         }
     }
 
@@ -64,9 +70,11 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            player.gameObject.SetActive(false);
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
+            retryButton.gameObject.SetActive(true);
+            menuButton.gameObject.SetActive(true);
         }
     }
 }

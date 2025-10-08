@@ -4,8 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject playButton;
-    public GameObject quitButton;
+    static int currentSceneIndex;
 
     void Start()
     {
@@ -20,12 +19,24 @@ public class Menu : MonoBehaviour
 
     public void OnPLayButton()
     {
-        SceneManager.LoadScene(1);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     public void OnQuitButton()
     {
         Application.Quit();
         Console.WriteLine("Quiting.......");
+    }
+
+    public void OnMenuButton()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnRetryButton()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
