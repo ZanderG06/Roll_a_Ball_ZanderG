@@ -26,7 +26,6 @@ public class Menu : MonoBehaviour
     public void OnQuitButton()
     {
         Application.Quit();
-        Console.WriteLine("Quiting.......");
     }
 
     public void OnMenuButton()
