@@ -284,7 +284,7 @@ RectTransform:
   m_GameObject: {fileID: 12383498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1613974053}
@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.1573, y: 9.227356}
+  m_AnchoredPosition: {x: -52.5, y: -25.7}
   m_SizeDelta: {x: 153.157, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12383500
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 386381289}
   - component: {fileID: 386381292}
   m_Layer: 5
-  m_Name: NextButton
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1231,7 +1231,7 @@ RectTransform:
   m_GameObject: {fileID: 386381287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1839638631}
@@ -1239,7 +1239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24, y: 47}
+  m_AnchoredPosition: {x: -48.8, y: 47}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386381289
@@ -1288,7 +1288,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 386381292}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnPLayButton
+        m_MethodName: OnPlayButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1787,8 +1787,8 @@ GameObject:
   - component: {fileID: 581217664}
   - component: {fileID: 581217663}
   m_Layer: 0
-  m_Name: Kill Zone
-  m_TagString: Enemy
+  m_Name: KillZone
+  m_TagString: KillZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3190,7 +3190,7 @@ RectTransform:
   m_GameObject: {fileID: 1539996148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1797242346}
@@ -3198,7 +3198,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24, y: -26}
+  m_AnchoredPosition: {x: -51.6, y: -97.4}
   m_SizeDelta: {x: 153.7081, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539996150
@@ -3930,6 +3930,7 @@ GameObject:
   - component: {fileID: 1839638635}
   - component: {fileID: 1839638634}
   - component: {fileID: 1839638633}
+  - component: {fileID: 1839638636}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -3999,7 +4000,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1839638634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1839638636}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: OnPlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1839638634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4101,6 +4114,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839638630}
   m_CullTransparentMesh: 1
+--- !u!114 &1839638636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839638630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35885be34c14e6946856ebf7240ad235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1870197341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}

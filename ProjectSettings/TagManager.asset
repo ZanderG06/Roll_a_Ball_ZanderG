@@ -7,6 +7,7 @@ TagManager:
   - PickUp
   - Enemy
   - Key
+  - KillZone
   layers:
   - Default
   - TransparentFX

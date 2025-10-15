@@ -757,7 +757,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1197759141}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnPLayButton
+        m_MethodName: OnPlayButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -76,5 +76,13 @@ public class PlayerController : MonoBehaviour
             retryButton.gameObject.SetActive(true);
             menuButton.gameObject.SetActive(true);
         }
+        else if (collision.gameObject.CompareTag("KillZone"))
+        {
+            player.gameObject.SetActive(false);
+            winTextObject.gameObject.SetActive(true);
+            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
+            retryButton.gameObject.SetActive(true);
+            menuButton.gameObject.SetActive(true);
+        }
     }
 }

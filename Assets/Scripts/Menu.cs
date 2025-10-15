@@ -14,13 +14,12 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    public void OnPLayButton()
+    public void OnPlayButton()
     {
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void OnQuitButton()
@@ -35,7 +34,6 @@ public class Menu : MonoBehaviour
 
     public void OnRetryButton()
     {
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
