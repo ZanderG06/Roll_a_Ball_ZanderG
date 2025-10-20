@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using System.Threading;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerController : MonoBehaviour
     public GameObject nextButton;
     public GameObject retryButton;
     public GameObject menuButton;
+    public AudioClip pickupSound;
+    public AudioClip keyPickupSound;
+    private AudioSource audioSource;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -23,6 +27,8 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
+        audioSource = gameObject.AddComponent<AudioSource>();
+        
     }
 
     void OnMove(InputValue movementValue)
@@ -58,11 +64,15 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
+            audioSource.clip = pickupSound;
+            audioSource.Play();
         }
         else if (other.gameObject.CompareTag("Key"))
         {
             other.gameObject.SetActive(false);
             unlockWall.gameObject.SetActive(false);
+            audioSource.clip = keyPickupSound;
+            audioSource.Play();
         }
     }
 

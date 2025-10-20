@@ -1083,6 +1083,8 @@ MonoBehaviour:
   nextButton: {fileID: 386381287}
   retryButton: {fileID: 12383498}
   menuButton: {fileID: 1539996148}
+  pickupSound: {fileID: 8300000, guid: 7ab3e3284b4db034e935a267b7f8dcdf, type: 3}
+  keyPickupSound: {fileID: 8300000, guid: 111b96f3d8adf36469d7726a5293b7b7, type: 3}
 --- !u!1001 &315795017
 PrefabInstance:
   m_ObjectHideFlags: 0
