@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject menuButton;
     public AudioClip pickupSound;
     public AudioClip keyPickupSound;
+    public Animator keyHide;
     private AudioSource audioSource;
     private Rigidbody rb;
     private int count;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winTextObject.SetActive(false);
         audioSource = gameObject.AddComponent<AudioSource>();
-        
+        keyHide.enabled = false;
     }
 
     void OnMove(InputValue movementValue)
@@ -73,6 +74,10 @@ public class PlayerController : MonoBehaviour
             unlockWall.gameObject.SetActive(false);
             audioSource.clip = keyPickupSound;
             audioSource.Play();
+        }
+        else if (other.gameObject.CompareTag("Trigger"))
+        {
+            keyHide.enabled = true;
         }
     }
 
