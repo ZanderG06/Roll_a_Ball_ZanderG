@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
         if(count >= 8)
         {
+            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Win!";
             winTextObject.SetActive(true);
             Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             nextButton.gameObject.SetActive(true);

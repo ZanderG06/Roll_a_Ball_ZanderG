@@ -30,10 +30,12 @@ public class Menu : MonoBehaviour
     public void OnMenuButton()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 
     public void OnRetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 }
