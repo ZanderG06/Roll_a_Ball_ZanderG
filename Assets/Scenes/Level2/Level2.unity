@@ -1135,9 +1135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4387b89659349944cb9aac2a16203e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retryButton: {fileID: 0}
-  quitButton: {fileID: 0}
-  textObj: {fileID: 0}
+  retryButton: {fileID: 12383498}
+  quitButton: {fileID: 1539996148}
+  textObj: {fileID: 1927200904}
 --- !u!1 &306669914
 GameObject:
   m_ObjectHideFlags: 0
