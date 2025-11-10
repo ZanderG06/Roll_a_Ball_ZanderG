@@ -1674,6 +1674,7 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 601936027}
   winTextObject: {fileID: 601936026}
+  keyText: {fileID: 601936026}
   unlockWall: {fileID: 0}
   player: {fileID: 1511711115}
   nextButton: {fileID: 0}

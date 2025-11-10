@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject keyText;
     public GameObject unlockWall;
     public GameObject player;
     public GameObject nextButton;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
+        keyText.SetActive(false);
         audioSource = gameObject.AddComponent<AudioSource>();
         keyHide.enabled = false;
     }
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
             unlockWall.gameObject.SetActive(false);
             audioSource.clip = keyPickupSound;
             audioSource.Play();
+            keyText.SetActive(true);
         }
         else if (other.gameObject.CompareTag("Trigger"))
         {
