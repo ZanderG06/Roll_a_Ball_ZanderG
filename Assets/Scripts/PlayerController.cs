@@ -68,15 +68,14 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-            audioSource.clip = pickupSound;
+            audioSource.PlayOneShot(pickupSound, .3f);
             audioSource.Play();
         }
         else if (other.gameObject.CompareTag("Key"))
         {
             other.gameObject.SetActive(false);
             unlockWall.gameObject.SetActive(false);
-            audioSource.clip = keyPickupSound;
-            audioSource.Play();
+            audioSource.PlayOneShot(keyPickupSound, .3f);
             keyText.SetActive(true);
         }
         else if (other.gameObject.CompareTag("Trigger"))

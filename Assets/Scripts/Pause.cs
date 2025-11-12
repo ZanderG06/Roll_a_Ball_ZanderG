@@ -7,6 +7,7 @@ public class Pause : MonoBehaviour
     public GameObject retryButton;
     public GameObject quitButton;
     public GameObject textObj;
+    public GameObject shade;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Pause : MonoBehaviour
             quitButton.SetActive(true);
             textObj.GetComponent<TextMeshProUGUI>().text = "Paused";
             textObj.SetActive(true);
+            shade.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isPaused == true)
         {
@@ -31,6 +33,7 @@ public class Pause : MonoBehaviour
             retryButton.SetActive(false);
             quitButton.SetActive(false);
             textObj.SetActive(false);
+            shade.SetActive(false);
         }
     }
 }
