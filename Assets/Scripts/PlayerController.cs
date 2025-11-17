@@ -102,5 +102,13 @@ public class PlayerController : MonoBehaviour
             retryButton.gameObject.SetActive(true);
             menuButton.gameObject.SetActive(true);
         }
+        else if (collision.gameObject.CompareTag("PickUp"))
+        {
+            collision.gameObject.SetActive(false);
+            count = count + 1;
+            SetCountText();
+            audioSource.PlayOneShot(pickupSound, .3f);
+            audioSource.Play();
+        }
     }
 }
