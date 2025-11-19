@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &12383499
 RectTransform:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.3, y: -25.4}
+  m_AnchoredPosition: {x: -40.479, y: -169}
   m_SizeDelta: {x: 153.157, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12383500
@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 12383503}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: OnRetryButton
+        m_MethodName: OnPersistButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1081,7 +1081,7 @@ Transform:
   m_GameObject: {fileID: 288052984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.715, z: 0}
+  m_LocalPosition: {x: -21.51, y: 0.715, z: -10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288052984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25eac3b85890d9c479591b9d0dd06154, type: 3}
   m_Name: 
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288052984}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4387b89659349944cb9aac2a16203e9f, type: 3}
   m_Name: 
@@ -1392,11 +1392,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6864259133885854862, guid: 21c369bf433f14f4aa44e7b71f230b94, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.965
+      value: 2.647
       objectReference: {fileID: 0}
     - target: {fileID: 6864259133885854862, guid: 21c369bf433f14f4aa44e7b71f230b94, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.755
+      value: 3.86
       objectReference: {fileID: 0}
     - target: {fileID: 6864259133885854862, guid: 21c369bf433f14f4aa44e7b71f230b94, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3589,13 +3589,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 10, z: -10}
+  m_LocalRotation: {x: 0.27059805, y: -0.6532815, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: -8.83, y: 7.65, z: 0.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: -90, z: 0}
 --- !u!114 &961739754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,7 +3643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.00128, y: -25}
+  m_AnchoredPosition: {x: 0.0000038147, y: -37.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &962821814
@@ -3666,7 +3666,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The End?
+  m_text: You have finally collected all the yellow cubes! However, something aches
+    in your soul. Perhaps you missed something?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3675,8 +3676,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3731,7 +3732,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -188.82066, y: 0, z: -173.40668, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4668,11 +4669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.811
+      value: 9.537
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.299
+      value: -1.163
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4730,7 +4731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1539996149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4748,7 +4749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.9, y: -92.8}
+  m_AnchoredPosition: {x: -40.754, y: -244}
   m_SizeDelta: {x: 153.7081, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539996150
@@ -5135,7 +5136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Retry
+  m_text: 'Persist
 
 '
   m_isRightToLeft: 0
@@ -5711,7 +5712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Menu
+  m_text: 'Go Home
 
 '
   m_isRightToLeft: 0
@@ -6423,7 +6424,7 @@ RectTransform:
   m_GameObject: {fileID: 1927200904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 962821813}
@@ -6431,7 +6432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0025635, y: 193}
+  m_AnchoredPosition: {x: 100, y: 408}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927200906
@@ -6454,7 +6455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win!
+  m_text: THE END?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6658,7 +6659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1957597870
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6799,7 +6800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1963907937
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7421,11 +7422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.62
+      value: 8.482
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.301
+      value: -1.15
       objectReference: {fileID: 0}
     - target: {fileID: 5871997761337614810, guid: 86f032f7b4c4561468631319b7a236b8, type: 3}
       propertyPath: m_LocalRotation.w

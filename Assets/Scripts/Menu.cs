@@ -38,4 +38,10 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
     }
+
+    public void OnPersistButton()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 }
