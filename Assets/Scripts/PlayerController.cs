@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -105,6 +106,10 @@ public class PlayerController : MonoBehaviour
             goldHat.SetActive(true);
             keyText.SetActive(true);
             other.gameObject.SetActive(false);
+        }
+        else if (other.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene(5);
         }
     }
 
