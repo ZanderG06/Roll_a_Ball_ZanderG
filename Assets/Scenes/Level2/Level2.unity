@@ -1121,7 +1121,6 @@ MonoBehaviour:
   nextButton: {fileID: 386381287}
   retryButton: {fileID: 12383498}
   menuButton: {fileID: 1539996148}
-  shade: {fileID: 1226158892}
   pickupSound: {fileID: 8300000, guid: 7ab3e3284b4db034e935a267b7f8dcdf, type: 3}
   keyPickupSound: {fileID: 8300000, guid: 111b96f3d8adf36469d7726a5293b7b7, type: 3}
   keyHide: {fileID: 462029425}
@@ -2798,7 +2797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Version 0.4
+  m_text: Version 0.5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
