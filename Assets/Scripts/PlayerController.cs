@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public GameObject nextButton;
     public GameObject retryButton;
     public GameObject menuButton;
+    public GameObject topHat;
+    public GameObject goldHat;
+    public GameObject goldHatPickup;
     public AudioClip pickupSound;
     public AudioClip keyPickupSound;
     public Animator keyHide;
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private int count;
     private float movementX;
     private float movementY;
+    static bool hasGoldHat = false;
     
     void Start()
     {
@@ -32,6 +36,18 @@ public class PlayerController : MonoBehaviour
         keyText.SetActive(false);
         audioSource = gameObject.AddComponent<AudioSource>();
         keyHide.enabled = false;
+
+        if (hasGoldHat)
+        {
+            topHat.SetActive(false);
+            goldHat.SetActive(true);
+            goldHatPickup.SetActive(false);
+        }
+        else
+        {
+            topHat.SetActive(true);
+            goldHat.SetActive(false);
+        }
     }
 
     void OnMove(InputValue movementValue)
@@ -81,6 +97,14 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Trigger"))
         {
             keyHide.enabled = true;
+        }
+        else if (other.gameObject.CompareTag("GoldHat"))
+        {
+            hasGoldHat = true;
+            topHat.SetActive(false);
+            goldHat.SetActive(true);
+            keyText.SetActive(true);
+            other.gameObject.SetActive(false);
         }
     }
 
