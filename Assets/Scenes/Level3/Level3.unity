@@ -1294,6 +1294,7 @@ MonoBehaviour:
   goldHatPickup: {fileID: 920414103}
   pickupSound: {fileID: 8300000, guid: 7ab3e3284b4db034e935a267b7f8dcdf, type: 3}
   keyPickupSound: {fileID: 8300000, guid: 111b96f3d8adf36469d7726a5293b7b7, type: 3}
+  hatPickupSound: {fileID: 8300000, guid: 6637a1bc082094f46a288410fc443c1c, type: 3}
   keyHide: {fileID: 462029425}
 --- !u!114 &288052992
 MonoBehaviour:

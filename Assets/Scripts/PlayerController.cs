@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public GameObject goldHatPickup;
     public AudioClip pickupSound;
     public AudioClip keyPickupSound;
+    public AudioClip hatPickupSound;
     public Animator keyHide;
     private AudioSource audioSource;
     private Rigidbody rb;
@@ -106,6 +107,7 @@ public class PlayerController : MonoBehaviour
             goldHat.SetActive(true);
             keyText.SetActive(true);
             other.gameObject.SetActive(false);
+            audioSource.PlayOneShot(hatPickupSound, .1f);
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
